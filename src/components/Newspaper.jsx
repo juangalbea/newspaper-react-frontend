@@ -15,11 +15,7 @@ export class Newspaper extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://newsapi.org/v2/everything?' +
-    'q=Apple&' +
-    'from=2020-02-29&' +
-    
-    'apiKey=2ccceac96c8841c88c0ecd7247f611d9')
+    axios.get
       .then(response => {
         this.setState({ news: response.data.articles })
       })
